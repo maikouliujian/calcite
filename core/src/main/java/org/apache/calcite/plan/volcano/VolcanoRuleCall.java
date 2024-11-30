@@ -282,7 +282,9 @@ public class VolcanoRuleCall extends RelOptRuleCall {
       // We have matched all operands. Now ask the rule whether it
       // matches; this gives the rule chance to apply side-conditions.
       // If the side-conditions are satisfied, we have a match.
+      //todo 规则匹配
       if (getRule().matches(this)) {
+        //todo 回调onMatch
         onMatch();
       }
     } else {
